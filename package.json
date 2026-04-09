@@ -6,7 +6,8 @@
     "dev": "next dev --turbo",
     "build": "next build --turbo",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "next build --turbo"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
