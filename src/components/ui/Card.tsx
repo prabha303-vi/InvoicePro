@@ -1,1 +1,70 @@
-"use client";\n\nimport { cn } from "@/lib/utils";\n\ninterface CardProps {\n  children: React.ReactNode;\n  className?: string;\n  padding?: \"sm\" | \"md\" | \"lg\" | \"xl\";\n  hover?: boolean;\n}\n\nconst Card = ({ children, className, padding = \"md\", hover = false }: CardProps) => {\n  const baseStyles = \"bg-white border border-border rounded-xl shadow-sm\";\n  const hoverStyles = hover ? \"hover:shadow-lg transition-shadow duration-200\" : \"\";\n  \n  const paddingStyles = {\n    sm: \"p-4\",\n    md: \"p-6\",\n    lg: \"p-8\",\n    xl: \"p-10\",\n  };\n\n  return (\n    <div className={cn(baseStyles, hoverStyles, paddingStyles[padding], className)}>\n      {children}\n    </div>\n  );\n};\n\nconst CardHeader = ({ children, className }: { children: React.ReactNode; className?: string }) => {\n  return (\n    <div className={cn(\"border-b border-border pb-4 mb-6\", className)}>\n      {children}\n    </div>\n  );\n};\n\nconst CardTitle = ({ children, className }: { children: React.ReactNode; className?: string }) => {\n  return (\n    <h3 className={cn(\"text-xl font-semibold text-foreground\", className)}>\n      {children}\n    </h3>\n  );\n};\n\nconst CardDescription = ({ children, className }: { children: React.ReactNode; className?: string }) => {\n  return (\n    <p className={cn(\"text-muted mt-1\", className)}>\n      {children}\n    </p>\n  );\n};\n\nconst CardContent = ({ children, className }: { children: React.ReactNode; className?: string }) => {\n  return (\n    <div className={cn(\"\", className)}>\n      {children}\n    </div>\n  );\n};\n\nconst CardFooter = ({ children, className }: { children: React.ReactNode; className?: string }) => {\n  return (\n    <div className={cn(\"border-t border-border pt-4 mt-6\", className)}>\n      {children}\n    </div>\n  );\n};\n\nexport { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };\n
+"use client";
+
+import { cn } from "@/lib/utils";
+
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+  padding?: "sm" | "md" | "lg" | "xl";
+  hover?: boolean;
+}
+
+const Card = ({ children, className, padding = "md", hover = false }: CardProps) => {
+  const baseStyles = "bg-white border border-border rounded-xl shadow-sm";
+  const hoverStyles = hover ? "hover:shadow-lg transition-shadow duration-200" : "";
+  
+  const paddingStyles = {
+    sm: "p-4",
+    md: "p-6",
+    lg: "p-8",
+    xl: "p-10",
+  };
+
+  return (
+    <div className={cn(baseStyles, hoverStyles, paddingStyles[padding], className)}>
+      {children}
+    </div>
+  );
+};
+
+const CardHeader = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+  return (
+    <div className={cn("border-b border-border pb-4 mb-6", className)}>
+      {children}
+    </div>
+  );
+};
+
+const CardTitle = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+  return (
+    <h3 className={cn("text-xl font-semibold text-foreground", className)}>
+      {children}
+    </h3>
+  );
+};
+
+const CardDescription = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+  return (
+    <p className={cn("text-muted mt-1", className)}>
+      {children}
+    </p>
+  );
+};
+
+const CardContent = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+  return (
+    <div className={cn("", className)}>
+      {children}
+    </div>
+  );
+};
+
+const CardFooter = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+  return (
+    <div className={cn("border-t border-border pt-4 mt-6", className)}>
+      {children}
+    </div>
+  );
+};
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
