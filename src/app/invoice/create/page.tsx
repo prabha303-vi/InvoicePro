@@ -177,14 +177,14 @@ export default function CreateInvoicePage() {
     cgstRate: "2.50",
     sgstRate: "2.50",
     items: [
-      {
-        id: "1", date: formatDate(new Date()), partyDcNo: "106", ourDcNo: "4093/25-26",
-        fabric: "S/J", colour: "Grey", roll: "422", weight: "8447.900", rate: "11.00", amount: "92926.90"
-      },
-      {
-        id: "2", date: formatDate(new Date()), partyDcNo: "106.", ourDcNo: "4094/25-26",
-        fabric: "L/Rib", colour: "Grey", roll: "22", weight: "455.500", rate: "45.00", amount: "20497.50"
-      }
+      // {
+      //   id: "1", date: formatDate(new Date()), partyDcNo: "106", ourDcNo: "4093/25-26",
+      //   fabric: "S/J", colour: "Grey", roll: "422", weight: "8447.900", rate: "11.00", amount: "92926.90"
+      // },
+      // {
+      //   id: "2", date: formatDate(new Date()), partyDcNo: "106.", ourDcNo: "4094/25-26",
+      //   fabric: "L/Rib", colour: "Grey", roll: "22", weight: "455.500", rate: "45.00", amount: "20497.50"
+      // }
     ] as InvoiceItem[]
   });
 
