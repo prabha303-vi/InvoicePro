@@ -495,7 +495,7 @@ export default function CreateInvoicePage() {
                     <tbody>
                       <tr><td style={{ paddingRight: 16, fontWeight: "bold", paddingBottom: 2 }}>Bank</td><td style={{ paddingBottom: 2 }}>: {formData.bankName}</td></tr>
                       <tr><td style={{ paddingRight: 16, fontWeight: "bold", paddingBottom: 2 }}>Branch</td><td style={{ paddingBottom: 2 }}>: {formData.bankBranch}</td></tr>
-                      <tr><td style={{ paddingRight: 16, fontWeight: "bold", paddingBottom: 2 }}>Ac/No</td><td style={{ paddingBottom: 2 }}>: {formData.bankAcNo}</td></tr>
+                      <tr><td style={{ paddingRight: 16, fontWeight: "bold", paddingBottom: 2 }}>Acc/No</td><td style={{ paddingBottom: 2 }}>: {formData.bankAcNo}</td></tr>
                       <tr><td style={{ paddingRight: 16, fontWeight: "bold", paddingBottom: 2 }}>IFSC Code</td><td style={{ paddingBottom: 2 }}>: {formData.bankIFSC}</td></tr>
                     </tbody>
                   </table>
